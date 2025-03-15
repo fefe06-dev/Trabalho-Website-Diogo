@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background: rgb(187, 228, 241);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-perfis {
+  text-align: center;
+
+  h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+  }
+
+  .perfis {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .perfil {
+      cursor: pointer;
+      transition: transform 0.2s;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        border: 3px solid transparent;
+        transition: border-color 0.2s;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      span {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgb(124, 142, 147);
+    }
+  }
+}

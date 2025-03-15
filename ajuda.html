@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Desenhos magicos</title>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="contatos, feedback, mensagem" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" href="ajudastyle.css">
+  <link rel="stylesheet" href="../novosep/novosepstyles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="" />
+</head>
+
+<body>
+  <div id="area-cabecalho">
+    <img src="../header_trabalho.jpeg" class="img-logo" />
+  </div>
+  <div id="container-menu">
+    <div id="area-menu">
+      <div>
+        <h1>Infância Mágica</h1>
+      </div>
+      <div id="menu">
+        <a href="../index.html">Em Alta</a> |
+        <a href="../lancamentos/lancamentos.html">Lançamentos</a> |
+        <a href="../novosep/novosep.html">Novos Episodios</a> |
+        <a class="atual" href="../ajuda/ajuda.html">Ajuda</a> |
+        <img id="icone-busca" src="../search.svg" /> |
+        <a class="login" href="../login.html">Trocar perfil</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="container-grupo">
+    <div id="area-grupo">
+      <div class="dev">
+        <h2>Nathalia Lopes</h2>
+        <img src="../nath.png" alt="foto_nath" class="foto-dev">
+        <p>
+          Me chamo Nathalida Lopes, tenho 18 anos e estou no 1° período de ADS
+          <br />
+          <br />
+          <a>nathalia.lopes@academico.ifpb.edu.br</a>
+        </p>
+
+      </div>
+      <div class="dev">
+        <h2>Anna Felicia</h2>
+        <img src="../fefe.png" alt="foto_fefe" class="foto-dev">
+        <p>
+          Me chamo Anna Felicia, tenho 19 anos e sou aluna do IFPB - Campus Cajazeiras desde o primeiro ano do
+          ensino médio, e atualmente faço a faculdade de Análise e Desenvolvimento de Sistemas na mesma.
+          <br>
+          <br>
+          <a>felicia@academico.ifpb.edu.br</a>
+        </p>
+      </div>
+      <div class="dev">
+        <h2>Emilly de Oliveira</h2>
+        <img src="../emilly.jpeg" alt="foto_fefe" class="foto-dev">
+        <p>
+          Me chamo Emilly Oliveira, tenho 19 anos e sou de Cajazeiras-PB. Curso ADS no IFPB.
+          <br>
+          <br>
+          <a>emilly.pinheiro@academico.ifpb.edu.br</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="rodape">
+      Todos os direitos reservados
+    </div>
+    <div id='rodape'>
+      Entre em contato (88)98888-8888
+    </div>
+    <script>
+      document.getElementById('icone-busca').addEventListener('click', function () {
+        if (!document.getElementById('input-busca')) {
+          var divBusca = document.createElement('div');
+          divBusca.id = 'div-busca';
+
+          var input = document.createElement('input');
+          input.type = 'text';
+          input.id = 'input-busca';
+          input.placeholder = 'Digite sua busca...';
+
+          var botaoFechar = document.createElement('img');
+          botaoFechar.src = '../close.svg';
+          botaoFechar.title = 'Fechar busca';
+
+          divBusca.appendChild(input);
+          divBusca.appendChild(botaoFechar);
+
+          var areaMenu = document.getElementById('container-menu');
+          areaMenu.appendChild(divBusca);
+
+          input.focus();
+
+          botaoFechar.addEventListener('click', function () {
+            areaMenu.removeChild(divBusca);
+          });
+        }
+      });
+    </script>
+</body>
+
+</html>
